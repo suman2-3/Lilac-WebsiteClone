@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f7f5f1;
+  --color-foreground: #2d3e26;
+  --color-muted: #74796b;
+  --color-accent: #e8dfe6;
+
+  --color-text: var(--color-foreground);
+
+  --font-body: var(--font-body);
+  --font-display: var(--font-display);
+
+  --spacing-section: 7rem;
+  --spacing-container: 2rem;
+
+  --radius-soft: 1.5rem;
+
+  --max-width-content: 1180px;
+
+  --text-hero: clamp(3rem, 5vw, 4.25rem);
+  --text-h1: 2.5rem;
+  --text-h2: 1.75rem;
+
+  --text-body-lg: 1.125rem;
+  --text-body: 1rem;
+
+  /* Line heights */
+  --leading-tight: 1.1;
+  --leading-body: 1.65;
+
+  /* Tracking */
+  --tracking-display: -0.01em;
+}
+
+html,
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: var(--tracking-display);
+}
+
+.header-visible {
+  transform: translateY(0);
+}
+
+.header-hidden {
+  transform: translateY(-100%);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
